@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit Perspectives — A multi-stakeholder method for audit questions</title>
+<meta name="description" content="A STORM-style method that runs any audit question through every layer of an engagement team — Staff to Partner, Core Audit to IT/Tax/Advisory, and external regulators — then maps where they conflict.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="kicker">Audit Perspectives</span>
+    <nav>
+      <a href="#method">Method</a>
+      <a href="#segments">Segments</a>
+      <a href="#example">Example</a>
+      <a href="#install">Install</a>
+      <a href="https://github.com/gitmaster-max/audit-perspectives" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>One audit question.<br>Every stakeholder who has to live with the answer.</h1>
+      <p class="lede">
+        A single view of an audit question returns the answer from whoever you asked.
+        A Partner and a Staff auditor on the same engagement are looking at the same risk
+        with completely different information, incentives, and accountability.
+        Audit Perspectives runs the question through all of them at once — and maps where
+        they disagree.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#install">Install the skill</a>
+        <a class="btn" href="#example">See a sample run</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="method">
+    <div class="wrap">
+      <h2>The method</h2>
+      <p>
+        Audit Perspectives adapts Stanford OVAL Lab's <strong>STORM</strong> method
+        (Shao et al., NAACL 2024) — multi-perspective question asking as a research
+        technique — into an audit-specific framework. Four stages, always in order.
+      </p>
+      <ol class="steps">
+        <li>
+          <span class="step-num">01</span>
+          <div>
+            <h3>Topic analysis</h3>
+            <p>Classify the question — technical accounting, audit procedure, risk assessment, control, quality/independence, or regulatory — and name the industry context.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <div>
+            <h3>The perspective grid</h3>
+            <p>Write a distinct view from every role that sees the question differently. Collapse roles that see it identically — no padding, no empty distinctions.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <div>
+            <h3>The tension map</h3>
+            <p>Table out where perspectives actively conflict: who disagrees, what it's actually about, whether it's operational, risk, regulatory, or incentive-driven — and which tension is load-bearing.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">04</span>
+          <div>
+            <h3>Synthesis</h3>
+            <p>What the full team agrees on, where it divides and why, the regulatory exposure, the load-bearing question, and a practical recommendation specific enough to act on.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" id="segments">
+    <div class="wrap">
+      <h2>Segments</h2>
+      <p>Core Audit and the external layer run on every question. IT Audit, Tax, and Advisory are pulled in when the topic touches their territory.</p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Segment</th><th>Roles</th><th>Runs when</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Core Audit</td>
+              <td>Staff → Senior → Manager → Senior Manager → Executive Director → Partner → Independent Reviewer → Quality Reviewer (EQCR)</td>
+              <td>Always</td>
+            </tr>
+            <tr>
+              <td>IT Audit</td>
+              <td>Staff → Partner</td>
+              <td>Automated controls, ITGCs, system-generated evidence, data integrity, ERP change, data analytics</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td>Staff → Partner</td>
+              <td>ASC 740, uncertain tax positions, transfer pricing, valuation allowances, tax reform impacts</td>
+            </tr>
+            <tr>
+              <td>Advisory</td>
+              <td>Staff → Partner</td>
+              <td>ICFR design/effectiveness, process risk, ERM, operational findings with audit implications</td>
+            </tr>
+            <tr>
+              <td>External</td>
+              <td>PCAOB Inspection · AICPA Peer Review · End Financial Users · Activist Investors · Sector Regulators</td>
+              <td>Always — regulators selected by sector (e.g. NAIC / CMS for health insurance)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="example">
+    <div class="wrap">
+      <h2>Sample run</h2>
+      <p class="sample-prompt">"How should we approach the risk assessment for IBNR reserves at a health insurer?"</p>
+
+      <div class="sample">
+        <div class="sample-block">
+          <h4>Staff / Senior</h4>
+          <p>The actuarial workpapers reconcile, but the completion factors for the most recent three months rely almost entirely on the actuary's judgment — there isn't enough paid claims history yet to test them independently. We can document the reconciliation, but we can't independently verify the tail without more runout.</p>
+        </div>
+        <div class="sample-block">
+          <h4>Manager</h4>
+          <p>The question is whether our reliance on the specialist's methodology is adequate given how sensitive IBNR is to the completion factor assumption in the most recent periods. I need the sensitivity analysis to show what a reasonable range of assumptions does to the reserve before I'm comfortable with the approach.</p>
+        </div>
+        <div class="sample-block">
+          <h4>Partner</h4>
+          <p>IBNR is almost always the largest, least-verifiable estimate on a health insurer's balance sheet, and it's exactly where a PCAOB inspector will look first. My exposure isn't the reconciliation — it's whether the file shows we independently challenged management's assumptions rather than just checked the specialist's math.</p>
+        </div>
+        <div class="sample-block">
+          <h4>Sector Regulator — NAIC</h4>
+          <p>Statutory reserve adequacy is a solvency question, not just a GAAP question. A reserve that is technically supportable under GAAP can still trigger a regulatory finding if it sits at the aggressive end of a reasonable range during a period of adverse claims development.</p>
+        </div>
+      </div>
+
+      <div class="load-bearing">
+        <span class="lb-label">Load-bearing tension</span>
+        <p>Staff has flagged — informally — that the most recent completion factors are judgment-heavy with thin data support. That concern hasn't reached the Partner's sign-off conversation. The gap between what Staff knows about the data and what's been escalated is where the audit deficiency risk actually concentrates.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="install">
+    <div class="wrap">
+      <h2>Install</h2>
+      <p>Audit Perspectives is a <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code</a> skill. Drop the skill file into your skills directory and invoke it from any conversation.</p>
+      <pre class="code-block"><code># macOS / Linux
+mkdir -p ~/.claude/skills/audit-perspectives
+curl -o ~/.claude/skills/audit-perspectives/SKILL.md \
+  https://raw.githubusercontent.com/gitmaster-max/audit-perspectives/main/SKILL.md
+
+# then, inside Claude Code
+/audit-perspectives "How should we approach the risk assessment for IBNR reserves at a health insurer?"</code></pre>
+      <p class="fine-print">Full skill definition — segment logic, role registers, tension categories, synthesis rules — is on <a href="https://github.com/gitmaster-max/audit-perspectives" target="_blank" rel="noopener">GitHub</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Audit Perspectives adapts Stanford OVAL Lab's STORM method (Shao et al., NAACL 2024) for the audit profession. Segment structure, hierarchy gradient, and tension mapping are original.</p>
+    <p><a href="https://github.com/gitmaster-max/audit-perspectives" target="_blank" rel="noopener">View source on GitHub</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
